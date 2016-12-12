@@ -6,9 +6,9 @@
 class mdadm::params {
   case $::osfamily {
     'Debian': {
-      $package_name = 'mdadm'
+      $package_name   = 'mdadm'
       $package_ensure = 'present'
-      $service_name = 'mdadm'
+      $service_name   = 'mdadm'
       $service_ensure = 'running'
       $service_manage = true
       # Older mdadm packages don't have a service status
