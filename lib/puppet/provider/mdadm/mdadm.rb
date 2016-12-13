@@ -69,10 +69,10 @@ Puppet::Type.type(:mdadm).provide(:mdadm) do
   private
 
   def make_conf
-    execute([command(:mkconf), "force-generate"])
+    execute([command(:mkconf), "force-generate"]) rescue nil
   end
 
   def update_initramfs
-    execute([command(:update_initramfs), '-u'])
+    execute([command(:update_initramfs), '-u']) rescue nil
   end
 end
