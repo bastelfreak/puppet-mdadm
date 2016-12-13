@@ -3,7 +3,7 @@ require 'puppet'
 Puppet::Type.type(:mdadm).provide(:mdadm) do
   desc "Manage Md raid devices"
 
-  commands  :mdadm_cmd => 'mdadm',
+  commands  :mdadm_cmd => '/usr/bin/mdadm',
             :mkconf => '/usr/share/mdadm/mkconf',
             :yes => 'yes',
             :update_initramfs => 'update-initramfs'
