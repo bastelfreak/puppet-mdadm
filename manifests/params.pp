@@ -20,11 +20,13 @@ class mdadm::params {
       $include_cron = true
     }
     'Archlinux': {
-      $package_name   = 'mdadm'
-      $package_ensure = 'present'
-      $service_name   = 'mdmonitor'
-      $service_ensure = 'stopped'
-      $service_manage = false
+      $package_name      = 'mdadm'
+      $package_ensure    = 'present'
+      $service_name      = 'mdmonitor'
+      $service_ensure    = 'stopped'
+      $service_manage    = false
+      $service_hasstatus = false
+      $include_cron      = false
     }
     default: {
       fail("${::operatingsystem} not supported")
