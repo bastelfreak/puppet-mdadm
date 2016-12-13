@@ -117,7 +117,7 @@ Puppet::Type.newtype(:mdadm) do
   newparam(:generate_conf, :boolean => true) do
     desc 'Whether to generate the mdadm.conf file'
     newvalues(:true, :false)
-    defaultto :true
+    defaultto :false
   end
 
   newparam(:update_initramfs, :boolean => true) do
@@ -131,7 +131,7 @@ Puppet::Type.newtype(:mdadm) do
       See http://ubuntuforums.org/showthread.php?t=1764861 for more info
     EOT
     newvalues(:true, :false)
-    defaultto :true
+    defaultto :false
   end
 
   newparam(:force, :boolean => true) do

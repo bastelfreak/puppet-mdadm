@@ -4,9 +4,9 @@ Puppet::Type.type(:mdadm).provide(:mdadm) do
   desc "Manage Md raid devices"
 
   commands  :mdadm_cmd => '/usr/bin/mdadm',
-            :mkconf => '/usr/share/mdadm/mkconf',
+            :mkconf => '/usr/bin/true',
             :yes => 'yes',
-            :update_initramfs => 'update-initramfs'
+            :update_initramfs => '/usr/bin/true'
 
   def create
     cmd = [command(:mdadm_cmd)]
