@@ -6,7 +6,7 @@ group :test do
   gem "rspec-puppet"
   gem "puppetlabs_spec_helper"
   gem "metadata-json-lint"
-  gem "rspec-puppet-facts"
+  gem "rspec-puppet-facts", ">= 1.6.1"
 end
 
 group :development do
