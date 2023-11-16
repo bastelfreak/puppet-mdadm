@@ -18,6 +18,6 @@ group :development do
 end
 
 group :system_tests do
-  gem "beaker"
-  gem "beaker-rspec"
+  gem "beaker", ">= 2.44.0"
+  gem "beaker-rspec", ">= 5.4.0"
 end
