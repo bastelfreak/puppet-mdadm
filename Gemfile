@@ -10,7 +10,7 @@ group :test do
 end
 
 group :development do
-  gem "travis"
+  gem "travis", ">= 1.8.3"
   gem "travis-lint"
   gem "vagrant-wrapper"
   gem "puppet-blacksmith"
@@ -18,6 +18,6 @@ group :development do
 end
 
 group :system_tests do
-  gem "beaker"
-  gem "beaker-rspec"
+  gem "beaker", ">= 3.22.0"
+  gem "beaker-rspec", ">= 6.0.0"
 end
